@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <Header/>
-        <Main/>
+        <Header @inputSearch='input'/>
+        <Main :titleToSearch='searchedTitle'/>
     </div>
 </template>
 
@@ -14,6 +14,16 @@ export default {
     components: {
         Header,
         Main
+    },
+    data: function() {
+        return {
+            searchedTitle: '',
+        }
+    },
+    methods: {
+        input(text) {
+            this.searchedTitle = text;
+        }
     }
 }
 </script>
