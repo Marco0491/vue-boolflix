@@ -18,9 +18,9 @@ export default {
     data: function() {
         return {
             titleInsert: '',
-        }
-    }
-}
+        };
+    },
+};
 </script>
 
 <style lang='scss' scoped>
