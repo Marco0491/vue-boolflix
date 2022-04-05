@@ -1,9 +1,16 @@
 import Vue from 'vue';
 import App from './App.vue';
 import LangFlag from 'vue-lang-code-flags';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+library.add(fasStar, farStar);
+
+Vue.component('lang-flag', LangFlag, 'font-awesome-icon', FontAwesomeIcon);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
-Vue.component('lang-flag', LangFlag);
 
 new Vue({
   render: h => h(App),
